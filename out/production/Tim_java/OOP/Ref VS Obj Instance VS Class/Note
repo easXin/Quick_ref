@@ -1,0 +1,114 @@
+Class : a class is basically a blueprint for a house, using the blueprint
+        we can build as many houses as we want based on the blueprint
+Instance : each house needs to be instantiated with new operator, it is
+        called object, but also called instance
+Reference : each house has an address, known as reference
+** we can pass reference as parameter to constructor and method
+
+House blueHouse = new House("blue")
+
+object type : house
+color : blue
+
+blueHouse is a reference to object in the memory
+
+House anotherHouse = blueHouse
+
+create a reference to the same object in the memory
+
+** two picture of paper with house address written down
+
+
+----------------------------------------------------------------------------
+
+this vs super  [not work for the static areas]
+
+constructor can never call both at same time
+
+this() : used to call the current class member [variable and method]
+         and constructor
+         commonly used in constructor and setter
+
+super() : used to access/call the parent class member [variable and method]
+          commonly used with method overriding, when we call a method with
+          the same name from the parent class
+          and used to call the parent constructor from child constructor
+
+          abstract class has constructor(), abstract class's constructor
+          takes no argument, and calling by default
+
+          used default value to fill the blank spot of constructor, if the
+          specific parameters are not provided
+
+----------------------------------------------------------------------------
+Method overriding vs method overloading
+
+overloading: two or more method with same name but difference parameter
+           or return type
+           it has nothing to do with polymorphism, but java developer often
+           refer to overloading as compile time polymorphism, because compiler
+           has to determined which method is going to be called based on the
+           method name and return type and argument list
+
+           we can overload static and instance method
+
+           must have same method name and different parameter
+
+           if yes, methods have difference return type or access modifier
+           throw different checked or unchecked exception
+
+overriding: defined a method in the child class that already existed in the
+          parent class [same name, same argument], by extends
+          runtime polymorphism || dynamic method  dispatch
+          because it is be called at runtime by JVM
+
+          + @override
+
+          can't have lower access modifier, same name & argument, return type
+          can be a subclass of return type in the parent class
+
+          only inherited methods can be overriden, constructor and private
+          methods and final cannot be overriden
+
+          a subclass can use super.methodName() to call the superclass version
+          of an overriden method
+
+
+--------------------------------------------------------------------------------
+
+Static method and instance method
+
+static : static method are declared using static modifier, static method can't
+         access instance variable directly
+         we don't have access to this keyword in the static method, whenever
+         you see a method that doesn't use instance variable that method should
+         be declared as a static method
+
+
+Instance method: instance method can access instance method and instance variable
+        directly and static method and static variable
+
+
+class Dog{
+    public void bark(){
+        system.out.println("woof");
+    }
+}
+
+public class Main {
+    public static void main(String [] args){
+        Dog rex = new Dog(); // create instance
+        rex.bark(); // call instance method
+    }
+}
+
+** if a method use any instance variable or method, then it should be declared as
+instance method, otherwise, static method
+
+
+--------------------------------------------------------------------------------
+static var vs instance var
+
+static var: shared by every instance of class
+
+Instance var belong to the instance of class, represent the state of class
