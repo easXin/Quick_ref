@@ -1,0 +1,24 @@
+
+Single Linked List : linear data structure where each element is a separate object
+                     where each element comprises of two items
+                        1) data
+                        2) reference to next node
+                        3) keep record the variable size
+
+                    only one data element can be reached from a given point
+
+
+Circular Single Linked List: it is exactly same as single linked list except the last
+                    element of circular single linked list points to the first element
+                    of circular single linked list
+                    head : address of first element
+                    tail : address of last element
+                    last -> first  : connected
+
+Double Linked List: in double linked list each node contain two reference.
+                    that reference to previous and next node
+
+Circular Double Linked List: int he case of circular doubly linked list, the only change
+                    that occurs is that the end of given list is linked back to the front
+                    of the list and vice versa
+                    * last one connects to the first one to form a circle
