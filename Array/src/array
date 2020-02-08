@@ -1,0 +1,9 @@
+/**
+     1) When to use array
+        when there is need to store multiple similar type of data
+        when random access is regular affair
+
+     2) When to avoid array
+        data to be store are non-homogeneous
+        when number of data to be store is not known in advance
+ */
