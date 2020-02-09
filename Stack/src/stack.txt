@@ -1,0 +1,8 @@
+Stack : LIFO
+
+When to use Stack
+helps manage the data in LIFO
+cannot be easily corrupted
+
+When to avoid stack
+random access not possible
