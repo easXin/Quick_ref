@@ -1,0 +1,13 @@
+
+Array:
+        linear queue
+        circular queue
+Linked list:         performs better than array
+        linear queue
+        circular queue
+
+When to use
+        helps manage the data in fifo manner
+        not easily corrupted
+When to avoid
+        not support random access
